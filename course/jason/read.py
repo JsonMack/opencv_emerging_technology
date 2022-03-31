@@ -3,7 +3,7 @@ import cv2 as cv
 # Reads image
 img = cv.imread('../resources/photos/cat.jpg')
 
-# Shows image
+# Shows image - imshow(windowName, pi)
 cv.imshow('Cat', img)
 
 # Waits for keyboard key to be pressed
