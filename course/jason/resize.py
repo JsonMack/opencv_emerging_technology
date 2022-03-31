@@ -14,7 +14,6 @@ def rescale_frame(frame, scale=0.75):
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
 
-
 def show():
     capture = cv.VideoCapture('../resources/videos/dog.mp4')
 
