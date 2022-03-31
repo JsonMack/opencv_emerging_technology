@@ -3,10 +3,10 @@ import cv2 as cv
 
 def rescale_frame(frame, scale=0.75):
     # width of image
-    width = int(frame.shape[1] * scale)
+    width = int(frame.shape * scale)
 
     # height of image
-    height = int(frame.shape[0] * scale)
+    height = int(frame.shape * scale)
 
     # creates a tuple of width and height
     dimensions = (width, height)
@@ -22,7 +22,6 @@ def show():
 
         frame_resized = rescale_frame(frame)
 
-        # read a frame
         cv.imshow('Video', frame)
         cv.imshow('Video Resized', frame_resized)
 
