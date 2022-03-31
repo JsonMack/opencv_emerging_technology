@@ -5,6 +5,7 @@ cv.imshow('Cat', img)
 
 
 def rescale_frame(frame, scale=0.75):
+    # recorded video
     width = int(frame.shape[1] * scale)
     height = int(frame.shape[0] * scale)
     dimensions = (width, height)
@@ -12,6 +13,13 @@ def rescale_frame(frame, scale=0.75):
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
 
+def change_res(width, height):
+    # live video
+    capture.set(3, width)
+    capture.set(4, height)
+    
+
+# Reading Video
 capture = cv.VideoCapture('../Resources/Videos/dog.mp4')
 
 while True:
