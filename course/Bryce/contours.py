@@ -1,6 +1,5 @@
 import cv2 as cv
 
-
 img = cv.imread('../resources/photos/cats.jpg')
 cv.imshow('Original', img)
 
