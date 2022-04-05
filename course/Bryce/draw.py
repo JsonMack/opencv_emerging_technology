@@ -25,7 +25,8 @@ cv.line(blank, (0, 0), (blank.shape[0]//2, blank.shape[1]//2), (128, 255, 128), 
 cv.imshow('Line', blank)
 
 # 5. Write text
-cv.putText(blank, 'Hello', (400,225), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0, 255, 0), 2)
+cv.putText(blank, 'Hello', (400, 225), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0, 255, 0), 2)
 cv.imshow('Text', blank)
+
 
 cv.waitKey(0)
