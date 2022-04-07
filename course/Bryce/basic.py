@@ -1,8 +1,9 @@
 import cv2 as cv
 
-img = cv.imread('../Resources/Photos/cat.jpg')
+img = cv.imread('../Resources/Photos/cats.jpg')
 
-cv.imshow('Cat', img)
+
+
 
 # converting to grayscale
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
@@ -13,7 +14,7 @@ blur = cv.GaussianBlur(img, (7, 7), cv.BORDER_DEFAULT)
 cv.imshow('Blur', blur)
 
 # edge cascade
-canny = cv.Canny(blur, 125, 175)
+canny = cv.Canny(img, 125, 175)
 cv.imshow('Canny Edges', canny)
 
 # dilating the image
@@ -28,7 +29,7 @@ cv.imshow('Eroded', eroded)
 # default = cv.INTER_AREA, best used for making smaller images.
 # when making image larger cv.INTER_LINEAR or cv.INTER_CUBIC.
 # cubic is slower but higher quality
-resized = cv.resize(img, (500, 100), interpolation=cv.INTER_AREA)
+resized = cv.resize(img, (1000, 500), interpolation=cv.INTER_AREA)
 cv.imshow('Resized', resized)
 
 # Cropping
