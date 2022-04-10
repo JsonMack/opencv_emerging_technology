@@ -1,1 +1,0 @@
-# opencv_emerging_technology
