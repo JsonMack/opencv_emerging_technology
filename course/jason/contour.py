@@ -16,12 +16,12 @@ gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 cv.imshow('Gray', gray)
 
-# blur = cv.GaussianBlur(gray, (5, 5), cv.BORDER_DEFAULT)
+blur = cv.GaussianBlur(gray, (5, 5), cv.BORDER_DEFAULT)
 
 # cv.imshow('Blur', blur)
 
 # # Grab the edges of the photo
-# canny = cv.Canny(blur, 125, 175)
+canny = cv.Canny(blur, 125, 175)
 
 # cv.imshow('Canny', canny)
 
@@ -37,11 +37,11 @@ cv.imshow('Gray', gray)
  
 # ret, thresh = cv.threshold(gray, 125, 255, cv.THRESH_BINARY)
 
-# contours, hierarchies = cv.findContours(thresh, cv.RETR_LIST, cv.CHAIN_APPROX_NONE)
+contours, hierarchies = cv.findContours(canny, cv.RETR_LIST, cv.CHAIN_APPROX_NONE)
 
 print(f'{len(contours)}')
 
-cv.imshow('Thresh', thresh)
+cv.imshow('Thresh', canny)
 
 cv.drawContours(blank, contours, -1, (0,0,255), 1)
 
