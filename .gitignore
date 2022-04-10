@@ -130,3 +130,7 @@ dmypy.json
 
 # IntelliJ files
 **.iml
+# IDEA files
+.idea/
+
+
